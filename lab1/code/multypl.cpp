@@ -47,8 +47,8 @@ int main() {
 
     int size1, size2;
 
-    auto A = readMatrix("matrixA.txt", size1);
-    auto B = readMatrix("matrixB.txt", size2);
+    auto A = readMatrix("A.txt", size1);
+    auto B = readMatrix("B.txt", size2);
 
     if (size1 != size2) {
         cout << "Not same size\n";
