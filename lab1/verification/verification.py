@@ -1,7 +1,7 @@
 import numpy as np
 
-def read_matrix(file):
-    with open(file) as f:
+def read_matrix(filename):
+    with open(filename) as f:
         n = int(f.readline())
         data = []
         for _ in range(n):
@@ -12,9 +12,11 @@ A = read_matrix("A.txt")
 B = read_matrix("B.txt")
 C_cpp = read_matrix("result.txt")
 
-C_python = A @ B
+C_np = A @ B
 
-if np.allclose(C_cpp, C_python):
+if np.allclose(C_cpp, C_np):
     print("Verification PASSED")
 else:
     print("Verification FAILED")
+    print("NumPy result:")
+    print(C_np)
